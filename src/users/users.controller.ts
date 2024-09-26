@@ -11,8 +11,8 @@ export class UsersController {
   }
 
   @Post()
-  public postUser(@Body() postUserDto: CreateUserDto) {
-    console.log(postUserDto);
-    return 'You sent a GET request to users endpoint';
+  public createUser(@Body() createUserDto: CreateUserDto) {
+    console.log(createUserDto);
+    return 'You sent a POST request to users endpoint';
   }
 }
