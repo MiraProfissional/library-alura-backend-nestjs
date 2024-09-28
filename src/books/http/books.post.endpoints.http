@@ -1,0 +1,12 @@
+POST http://localhost:8000/books
+Content-Type: application/json
+
+{
+    "title": "Aprendendo a programar com Python",
+    "author":"Joao Vitor Mira",
+    "publication_year":2000,
+    "genre": "Linguagem de Programação",
+    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquam at augue bibendum sagittis. Nullam non orci ac orci posuere dictum.",
+    "price":29.99,
+    "image_path":"/images/image.png"
+}
