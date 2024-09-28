@@ -1,0 +1,8 @@
+PATCH http://localhost:8000/books
+Content-Type: application/json
+
+{
+    "description":"Uma descrição de teste qualquer para juntar 100 caracteres, então vou continuar escrevendo para ele ficar maiors",
+    "price":99.99,
+    "image_path":"/images/imageTeste.png"
+}
