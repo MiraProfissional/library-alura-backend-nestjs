@@ -1,4 +1,13 @@
-import { Body, Controller, Get, Param, Patch, Post } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  ParseIntPipe,
+  Patch,
+  Post,
+} from '@nestjs/common';
 import { GetUsersDto } from 'src/users/dtos/get-users.dto';
 import { CreateBookDto } from './dtos/create-book.dto';
 import { UpdateBookDto } from './dtos/update-book.dto';
@@ -20,6 +29,12 @@ export class BooksController {
   @Patch()
   public updateBooks(@Body() updateBookDto: UpdateBookDto) {
     console.log(updateBookDto);
+    return 'You sent a PATCH request to books endpoint';
+  }
+
+  @Delete('/:id')
+  public removeBook(@Param('id', ParseIntPipe) idBook: number) {
+    console.log(idBook);
     return 'You sent a PATCH request to books endpoint';
   }
 }
