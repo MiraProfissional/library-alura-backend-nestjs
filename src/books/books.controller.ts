@@ -1,6 +1,7 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Patch, Post } from '@nestjs/common';
 import { GetUsersDto } from 'src/users/dtos/get-users.dto';
 import { CreateBookDto } from './dtos/create-book.dto';
+import { UpdateBookDto } from './dtos/update-book.dto';
 
 @Controller('books')
 export class BooksController {
@@ -14,5 +15,11 @@ export class BooksController {
   public createBooks(@Body() createBookDto: CreateBookDto) {
     console.log(createBookDto);
     return 'You sent a POST request to books endpoint';
+  }
+
+  @Patch()
+  public updateBooks(@Body() updateBookDto: UpdateBookDto) {
+    console.log(updateBookDto);
+    return 'You sent a PATCH request to books endpoint';
   }
 }
